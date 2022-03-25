@@ -35,6 +35,11 @@ nav a{
   padding: 0.5em;
 }
 
+.nav a:active{
+  background-color: #fafaff;
+  color: #181818;
+}
+
 .nav_item a:hover, a:focus{
   color: #000000;
   background-color: white;
@@ -85,7 +90,7 @@ footer{
   justify-content: flex-start;
   background-color: white;
   border-top: solid #e7e7e7 2px;
-  gap: 10px;
+  gap: 20px;
   /* max-height: 5%;
   min-height: 1%; */
 }
@@ -93,15 +98,16 @@ footer{
 footer p{
   display: inline-block;
   text-align: center;
-  padding-top: 20px; 
-  font-size: 1.2em;
+  padding-top: 1em; 
+  font-size: 1.3em;
 }
 .footer_icons{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  padding-left: 4vw;
   width: 20%;
-  gap: 5px;
-  padding-top: 1em;
+  gap: 10px;
+  padding-top: 2em;
 
 }
 
@@ -121,6 +127,12 @@ footer a:visited{
   /* margin: 5% 0 % 0; */
   /* padding-top: 10%; */
 }
+.grid_gallery{
+  display: grid;
+  grid-template-columns: 1;
+  row-gap: 20px;
+  overflow: hidden;
+}
 
 img{
   width: 100%;
@@ -133,20 +145,21 @@ h1{
   font-size: 2em;
   font-weight: 400;
   padding-bottom: 1em;
-  text-align: center;
+  text-align: left;
 }
 
 h2{
   font-size: 1.5em;
-  text-align: center;
+  text-align: left;
   font-weight: 600;
   margin: 5vh 0 1vh 0;
+
   /* margin: 1% 0 1% 1%; */
 }
 
 h1 + h2{
   font-size: 1.5em;
-  text-align: center;
+  text-align: left;
   font-weight: 600;
   margin: 0 0 2% 0;
 
@@ -186,27 +199,32 @@ p{
   overflow: hidden;
   grid-row: 1 / 2;
 }
-.about_container{
+/* .about_container{
   display: grid;
   grid-template-columns: auto 6fr auto;
-  /* grid-template-rows: 3fr 5fr 5fr; */
+  /* grid-template-rows: 3fr 5fr 5fr; 
   row-gap: 12px;
-
-}
-.background{
+} */
+/* .background{
   background-color: #fafaff;
   height: 100%;
   z-index: 0;
-}
+} */
 
-.about-text, .background{
+/* .about-text, .background{
   grid-row: 2 / 3;
-}
+} */
 
 .about-text{
   z-index: 1;
-  padding: 2%;
+  padding: 5%;
   text-align: left;
+  background-color: #fafaff;
+}
+
+.about h1{
+  background-color: #fafaff;
+  padding-left: 1vw;
 }
 
 /* form styling */
@@ -261,7 +279,7 @@ textarea{
 
 input{
   font-size: medium;
-  color: #e7e7e7;
+  color: black;
 }
 
 
@@ -272,7 +290,6 @@ input[type=checkbox]{
 
 input[type=submit] {
   background-color: #fac650;
-  opacity: 0.7;
   color: #181818;
   font-size: 1.5em;
   padding: 14px 20px;
@@ -282,17 +299,13 @@ input[type=submit] {
   width: 100%;
 }
 
-input[type=submit]:hover {
-  opacity: 1;
-}
-
 .myform{
   grid-row: 3 /4;
   width: 100%;
 }
 
 @media screen and (prefers-reduced-motion: reduce){
-  #logo{
+  .about-img{
       animation: none;
   }
 }
